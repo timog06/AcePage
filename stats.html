@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Clan - Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container" onclick="window.location.href='index.html'">
+                <div class="logo"></div>
+                <div>
+                    <div class="clan-name">Ace Clan</div>
+                    <div class="clan-subtitle">Galactic Contention Mod Clan</div>
+                </div>
+            </div>
+            <nav>
+                <a href="about.html">About Us</a>
+                <a href="stats.html">Stats</a>
+                <a href="rules.html">Rules</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="stats-container">
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" placeholder="Input SteamId" class="stats-search">
+                <button class="button">Deployment Record</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="personal-stats">
+                <h2>Personal stats</h2>
+                <div class="stats-content">
+                    <!-- Personal stats will be populated here -->
+                </div>
+            </div>
+
+            <div class="global-stats">
+                <div class="stats-section global-section active" data-section="global">
+                    <h2>Global Stats</h2>
+                    <div class="stats-content">
+                        <!-- Global stats will be populated here -->
+                    </div>
+                </div>
+
+                <div class="stats-section monthly-section" data-section="monthly">
+                    <h2>Monthly Stats</h2>
+                    <div class="stats-content">
+                        <!-- Monthly stats will be populated here -->
+                    </div>
+                </div>
+
+                <div class="stats-section daily-section" data-section="daily">
+                    <h2>Daily Stats</h2>
+                    <div class="stats-content">
+                        <!-- Daily stats will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <div>
+                        <a href="about.html">About Us</a>
+                        <a href="stats.html">Stats</a>
+                        <a href="rules.html">Rules</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p>Copyright 2025 Ace Clan. All Rights Reserved</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Socials</h4>
+                    <div>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="stats.js"></script>
+</body>
+</html>
