@@ -1,0 +1,72 @@
+{
+    "period": "January 17th 2025",
+    "serverStats": {
+        "totalKills": 6077,
+        "totalTeamKills": 307,
+        "totalMeleeKills": 34,
+        "totalRevives": 620,
+        "totalMatches": 22,
+        "uniquePlayers": 536,
+        "linkedSteamUsers": 0
+    },
+    "topKills": [
+        {"rank": 1, "player": "Rumbly", "kills": 142},
+        {"rank": 2, "player": "FerdinandBrickleballs", "kills": 134},
+        {"rank": 3, "player": "lordgriffin2024", "kills": 100},
+        {"rank": 4, "player": "The Grand Finale", "kills": 91},
+        {"rank": 5, "player": "FadeK94", "kills": 83},
+        {"rank": 6, "player": "Andy77", "kills": 81},
+        {"rank": 7, "player": "Narrow", "kills": 79},
+        {"rank": 8, "player": "Colonel Cucker", "kills": 76},
+        {"rank": 9, "player": "vivillex", "kills": 73},
+        {"rank": 10, "player": "Legacy", "kills": 72}
+    ],
+    "topDeaths": [
+        {"rank": 1, "player": "lordgriffin2024", "deaths": 120},
+        {"rank": 2, "player": "Andy77", "deaths": 98},
+        {"rank": 3, "player": "TelliTubbies", "deaths": 82},
+        {"rank": 4, "player": "FerdinandBrickleballs", "deaths": 82},
+        {"rank": 5, "player": "CT_ihoe", "deaths": 74},
+        {"rank": 6, "player": "LT. KingG", "deaths": 64},
+        {"rank": 7, "player": "Hightower", "deaths": 63},
+        {"rank": 8, "player": "Evil Wizard Tucker", "deaths": 58},
+        {"rank": 9, "player": "Aprikoss", "deaths": 56},
+        {"rank": 10, "player": "Rumbly", "deaths": 54}
+    ],
+    "topRevives": [
+        {"rank": 1, "player": "Derek", "revives": 34},
+        {"rank": 2, "player": "Joshey", "revives": 21},
+        {"rank": 3, "player": "ManOfBudder", "revives": 18},
+        {"rank": 4, "player": "Lebrontron", "revives": 16},
+        {"rank": 5, "player": "Crow", "revives": 14},
+        {"rank": 6, "player": "ryguyrocky21", "revives": 14},
+        {"rank": 7, "player": "ErroneousGap", "revives": 14},
+        {"rank": 8, "player": "DockingMaster76", "revives": 14},
+        {"rank": 9, "player": "NickBuii41234", "revives": 13},
+        {"rank": 10, "player": "Zenosity", "revives": 11}
+    ],
+    "topTeamKills": [
+        {"rank": 1, "player": "FerdinandBrickleballs", "teamKills": 16},
+        {"rank": 2, "player": "TheChosenMammoth", "teamKills": 13},
+        {"rank": 3, "player": "Rumbly", "teamKills": 8},
+        {"rank": 4, "player": "TelliTubbies", "teamKills": 7},
+        {"rank": 5, "player": "Memphissmayfire", "teamKills": 7},
+        {"rank": 6, "player": "ragelegend", "teamKills": 6},
+        {"rank": 7, "player": "Nebula", "teamKills": 6},
+        {"rank": 8, "player": "natronk", "teamKills": 6},
+        {"rank": 9, "player": "Cody_Acurrate#01", "teamKills": 6},
+        {"rank": 10, "player": "SqueakyMonkey", "teamKills": 6}
+    ],
+    "topMeleeKills": [
+        {"rank": 1, "player": "ShaunRian02", "meleeKills": 12},
+        {"rank": 2, "player": "Let Me Be Frank", "meleeKills": 4},
+        {"rank": 3, "player": "FerdinandBrickleballs", "meleeKills": 3},
+        {"rank": 4, "player": "ValkorHelio", "meleeKills": 2},
+        {"rank": 5, "player": "TaG_Smoke", "meleeKills": 2},
+        {"rank": 6, "player": "Rho", "meleeKills": 2},
+        {"rank": 7, "player": "John Warhammer", "meleeKills": 1},
+        {"rank": 8, "player": "WEATHER", "meleeKills": 1},
+        {"rank": 9, "player": "Echo", "meleeKills": 1},
+        {"rank": 10, "player": "Chief-Sweeney", "meleeKills": 1}
+    ]
+}
