@@ -271,9 +271,53 @@ document.addEventListener('DOMContentLoaded', async function() {
         const dailyStats = await fetch('daily_stats.json').then(r => r.json());
 
         // Set dates/periods
-        document.getElementById('global-start-date').textContent = `Since ${globalStats.startDate}`;
-        document.getElementById('monthly-period').textContent = monthlyStats.period;
         document.getElementById('daily-period').textContent = dailyStats.period;
+
+        // Handle month abbreviation based on screen width
+        const globalDateElement = document.getElementById('global-start-date');
+        const monthlyPeriodElement = document.getElementById('monthly-period');
+        
+        const monthMap = {
+            'January': 'Jan', 'February': 'Feb', 'March': 'Mar',
+            'April': 'Apr', 'May': 'May', 'June': 'Jun',
+            'July': 'Jul', 'August': 'Aug', 'September': 'Sep',
+            'October': 'Oct', 'November': 'Nov', 'December': 'Dec'
+        };
+
+        const formatDate = (text, isMobile) => {
+            const dateParts = text.split(' ');
+            if (isMobile) {
+                if (monthMap[dateParts[1]]) { 
+                    dateParts[1] = monthMap[dateParts[1]];
+                    return dateParts.join(' ');
+                } else if (monthMap[dateParts[0]]) { 
+                    dateParts[0] = monthMap[dateParts[0]];
+                    return dateParts.join(' ');
+                }
+            }
+            return text;
+        };
+
+        const formatPeriod = (text, isMobile) => {
+            const periodParts = text.split(' ');
+            if (isMobile && monthMap[periodParts[0]]) {
+                periodParts[0] = monthMap[periodParts[0]];
+                return periodParts.join(' ');
+            }
+            return text;
+        };
+
+        const updateDates = () => {
+            const isMobile = window.innerWidth <= 350;
+            globalDateElement.textContent = `Since ${formatDate(globalStats.startDate, isMobile)}`;
+            monthlyPeriodElement.textContent = formatPeriod(monthlyStats.period, isMobile);
+        };
+
+        // Set initial values
+        updateDates();
+        
+        // Update on window resize
+        window.addEventListener('resize', updateDates);
 
         // Populate sections
         document.querySelector('.global-section .stats-content').innerHTML = 

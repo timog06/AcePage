@@ -203,8 +203,16 @@ nav a:hover {
     cursor: pointer;
 }
 
+#rules-column h4 {
+    transition: background-color 0.3s ease;
+}
+
 #about-column:hover,
 #rules-column:hover {
+    background-color: var(--widget-bg-lighter);
+}
+
+#rules-column:hover h4 {
     background-color: var(--widget-bg-lighter);
 }
 
@@ -212,7 +220,7 @@ nav a:hover {
 #discord-rules-preview,
 #squad-rules-preview {
     margin-top: 1rem;
-    height: 200px;
+    height: 260px;
     overflow-y: auto;
 }
 
@@ -426,6 +434,31 @@ footer {
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.staff-member {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--widget-bg-lighter);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    min-width: 0; /* Allows text truncation to work in flex container */
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0; /* Allows text truncation to work in flex container */
+    flex: 1; /* Takes remaining space */
 }
 
 .member-role {
@@ -609,9 +642,11 @@ footer {
 
 .stats-grid-content {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
 }
+
 
 .stats-block {
     flex: 1;
@@ -655,6 +690,7 @@ footer {
     padding: 0.5rem;
     background-color: var(--widget-bg);
     border-radius: 5px;
+    overflow-wrap: break-word;
 }
 
 .error-message {
