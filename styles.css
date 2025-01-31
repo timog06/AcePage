@@ -545,6 +545,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .personal-stats, .global-stats {
