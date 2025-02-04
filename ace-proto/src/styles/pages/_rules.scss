@@ -1,0 +1,55 @@
+@use '../variables' as *;
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin: $spacing-lg auto;
+  max-width: 1500px;
+  padding: 0 $spacing-sm;
+
+  .rules-row {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .rule-section {
+      flex: 1;
+      min-width: 300px;
+    }
+  }
+}
+
+.rule-section {
+  background: $background-dark;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  text-align: left;
+  box-sizing: border-box;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: $spacing-sm;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: "•";
+        color: $primary-color;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}

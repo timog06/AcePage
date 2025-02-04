@@ -1,0 +1,71 @@
+{
+    "period": "Since November 9, 2024",
+    "serverStats": {
+      "totalKills": 570117,
+      "totalTeamKills": 29559,
+      "totalMeleeKills": 5187,
+      "totalRevives": 70424,
+      "totalMatches": 1673,
+      "uniquePlayers": 25211
+    },
+    "topKills": [
+      {"rank": 1, "player": "Legacy", "kills": 6027},
+      {"rank": 2, "player": "The Grand Finale", "kills": 5436},
+      {"rank": 3, "player": "SpaceRam", "kills": 2939},
+      {"rank": 4, "player": "RollyOllie", "kills": 2605},
+      {"rank": 5, "player": "The Vengeful Teapot", "kills": 2519},
+      {"rank": 6, "player": "RudeMood", "kills": 2060},
+      {"rank": 7, "player": "LT. KingG", "kills": 1843},
+      {"rank": 8, "player": "ValkorHelio", "kills": 1814},
+      {"rank": 9, "player": "buckwild", "kills": 1537},
+      {"rank": 10, "player": "FerdinandBrickleballs", "kills": 1476}
+    ],
+    "topDeaths": [
+      {"rank": 1, "player": "LT. KingG", "deaths": 1760},
+      {"rank": 2, "player": "The Vengeful Teapot", "deaths": 1289},
+      {"rank": 3, "player": "RollyOllie", "deaths": 1166},
+      {"rank": 4, "player": "fire the emergency booosters", "deaths": 1153},
+      {"rank": 5, "player": "SpaceRam", "deaths": 1120},
+      {"rank": 6, "player": "Imperator", "deaths": 1067},
+      {"rank": 7, "player": "RudeMood", "deaths": 966},
+      {"rank": 8, "player": "buckwild", "deaths": 895},
+      {"rank": 9, "player": "The Grand Finale", "deaths": 894},
+      {"rank": 10, "player": "Cody_Acurrate#01", "deaths": 881}
+    ],
+    "topRevives": [
+      {"rank": 1, "player": "Joe1345", "revives": 250},
+      {"rank": 2, "player": "Echo", "revives": 189},
+      {"rank": 3, "player": "Cody_Acurrate#01", "revives": 159},
+      {"rank": 4, "player": "Nivica", "revives": 155},
+      {"rank": 5, "player": "TaG_Smoke", "revives": 130},
+      {"rank": 6, "player": "KingMurphy0921", "revives": 127},
+      {"rank": 7, "player": "PDADDY", "revives": 125},
+      {"rank": 8, "player": "Terra", "revives": 122},
+      {"rank": 9, "player": "Wind Slash", "revives": 120},
+      {"rank": 10, "player": "Mist", "revives": 119}
+    ],
+    "topTeamKills": [
+      {"rank": 1, "player": "FerdinandBrickleballs", "teamKills": 240},
+      {"rank": 2, "player": "The Vengeful Teapot", "teamKills": 239},
+      {"rank": 3, "player": "SpaceRam", "teamKills": 188},
+      {"rank": 4, "player": "Legacy", "teamKills": 144},
+      {"rank": 5, "player": "Kaptain Kannibis", "teamKills": 124},
+      {"rank": 6, "player": "LT. KingG", "teamKills": 109},
+      {"rank": 7, "player": "The Grand Finale", "teamKills": 106},
+      {"rank": 8, "player": "buckwild", "teamKills": 104},
+      {"rank": 9, "player": "dantheman05", "teamKills": 102},
+      {"rank": 10, "player": "WookieWithACookie", "teamKills": 98}
+    ],
+    "topMeleeKills": [
+      {"rank": 1, "player": "The Vengeful Teapot", "meleeKills": 254},
+      {"rank": 2, "player": "buckwild", "meleeKills": 157},
+      {"rank": 3, "player": "Critty", "meleeKills": 107},
+      {"rank": 4, "player": "Radio", "meleeKills": 82},
+      {"rank": 5, "player": "RollyOllie", "meleeKills": 78},
+      {"rank": 6, "player": "worksolution507", "meleeKills": 74},
+      {"rank": 7, "player": "RudeMood", "meleeKills": 62},
+      {"rank": 8, "player": "ManOfBudder", "meleeKills": 51},
+      {"rank": 9, "player": "ChanceTuna", "meleeKills": 46},
+      {"rank": 10, "player": "Uncle Iroh", "meleeKills": 40}
+    ]
+  }

@@ -1,0 +1,64 @@
+{
+    "username": "dovahound",
+    "steamId": "76561199092179459",
+    "profilePicture": null,
+    "offensive": {
+        "kills": 113,
+        "killsPerGame": 5.1,
+        "deaths": 124,
+        "deathsPerGame": 5.6,
+        "kd": 0.91
+    },
+    "defensive": {
+        "revives": 1,
+        "revivesPerGame": 0.0,
+        "timesRevived": 5
+    },
+    "negative": {
+        "teamKills": 2,
+        "teamKillsPerGame": 0.1
+    },
+    "bestPerformance": {
+        "bestGame": {
+            "kills": 43,
+            "map": "CorvetteV2 Seed V1",
+            "date": "12-19"
+        },
+        "mostUsedWeapon": {
+            "weapon": "E5 A New",
+            "kills": 43
+        }
+    },
+    "matchStats": {
+        "matchesPlayed": 22,
+        "serverKills": 553136,
+        "serverRevives": 82496,
+        "serverMatches": 1616
+    },
+    "playerInteractions": {
+        "mostKilled": {
+            "player": "MsterLich",
+            "kills": 11
+        },
+        "mostKilledBy": {
+            "player": "AllergicToBullets",
+            "deaths": 13
+        },
+        "mostTeamKilled": {
+            "player": "RudeMood",
+            "kills": 1
+        },
+        "mostTeamKilledBy": {
+            "player": "pokah",
+            "deaths": 1
+        },
+        "mostMeleed": {
+            "player": "None",
+            "kills": 0
+        },
+        "mostMeleedBy": {
+            "player": "Lemon",
+            "deaths": 1
+        }
+    }
+}

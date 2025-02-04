@@ -1,0 +1,240 @@
+@use "sass:color";
+@use '../variables' as *;
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+
+  .comparison-search {
+    max-width: 600px;
+    margin: 0 auto $spacing-lg;
+
+    .search-bar {
+      display: flex;
+      gap: $spacing-sm;
+
+      .search-input-container {
+        flex: 1;
+        position: relative;
+
+        .steam-id-input {
+          width: 100%;
+          padding: 0.5rem;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: $border-radius;
+          color: white;
+          font-size: 1rem;
+
+          &:focus {
+            outline: none;
+            border-color: $primary-color;
+          }
+        }
+
+        .search-history {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(26, 26, 26, 0.95);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: $border-radius;
+          margin-top: 0.5rem;
+          z-index: 10;
+
+          .history-item {
+            width: 100%;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color $transition-speed;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.1);
+              color: $primary-color;
+            }
+
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+      }
+
+      .search-button {
+        padding: 0.5rem $spacing-md;
+        background: $primary-color;
+        color: white;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background-color $transition-speed;
+
+        &:hover:not(:disabled) {
+          background: color.adjust($primary-color, $lightness: -10%);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .error-message {
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+  }
+
+  .comparison-results {
+    background: $background-dark;
+    border-radius: $border-radius;
+    padding: $spacing-md;
+
+    .comparison-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-md;
+
+      h3 {
+        color: $primary-color;
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      .add-player-button {
+        padding: 0.5rem $spacing-md;
+        background: $primary-color;
+        color: white;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background $transition-speed;
+
+        &:hover {
+          background: color.adjust($primary-color, $lightness: -10%);
+        }
+      }
+    }
+
+    .comparison-table {
+      overflow-x: auto;
+
+      .stat-labels {
+        .stat-row {
+          display: flex;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+          &.header {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        .stat-cell {
+          flex: 1;
+          padding: $spacing-sm;
+          min-width: 150px;
+          text-transform: capitalize;
+
+          &:first-child {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+          }
+        }
+
+        .category-header {
+          padding: $spacing-sm;
+          color: $primary-color;
+          font-weight: 600;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .player-columns {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: $spacing-md;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+          padding-bottom: $spacing-md;
+
+          .player-column {
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            justify-content: center;
+
+            &:first-child {
+              margin-left: 150px; // Width of stats label column
+            }
+
+            .player-info {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.5rem;
+              padding: 0.5rem;
+              position: relative;
+
+              .profile-picture {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+
+                .person-icon {
+                  width: 40px;
+                  height: 40px;
+                  color: rgba(255, 255, 255, 0.7);
+                }
+              }
+
+              .player-name {
+                font-weight: 500;
+                text-align: center;
+                word-break: break-word;
+                max-width: 120px;
+              }
+
+              .remove-player {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                background: none;
+                border: none;
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 1.2rem;
+                padding: 0.2rem;
+                cursor: pointer;
+                transition: color $transition-speed;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
