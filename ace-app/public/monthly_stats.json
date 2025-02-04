@@ -1,0 +1,72 @@
+{
+    "period": "January 2025",
+    "serverStats": {
+        "totalKills": 153985,
+        "totalTeamKills": 8565,
+        "totalMeleeKills": 1248,
+        "totalRevives": 19680,
+        "totalMatches": 433,
+        "uniquePlayers": 8768,
+        "linkedSteamUsers": 0
+    },
+    "topKills": [
+        {"rank": 1, "player": "Legacy", "kills": 1852},
+        {"rank": 2, "player": "The Grand Finale", "kills": 1029},
+        {"rank": 3, "player": "Kaptain Kannibis", "kills": 796},
+        {"rank": 4, "player": "buckwild", "kills": 796},
+        {"rank": 5, "player": "FerdinandBrickleballs", "kills": 736},
+        {"rank": 6, "player": "Chief", "kills": 724},
+        {"rank": 7, "player": "RollyOllie", "kills": 667},
+        {"rank": 8, "player": "SpaceRam", "kills": 648},
+        {"rank": 9, "player": "The Vengeful Teapot", "kills": 581},
+        {"rank": 10, "player": "tanardis", "kills": 517}
+    ],
+    "topDeaths": [
+        {"rank": 1, "player": "buckwild", "deaths": 515},
+        {"rank": 2, "player": "LT. KingG", "deaths": 472},
+        {"rank": 3, "player": "Kaptain Kannibis", "deaths": 370},
+        {"rank": 4, "player": "lordgriffin2024", "deaths": 369},
+        {"rank": 5, "player": "Chief", "deaths": 355},
+        {"rank": 6, "player": "Kaddicus", "deaths": 352},
+        {"rank": 7, "player": "Kile", "deaths": 323},
+        {"rank": 8, "player": "ItchyNutt", "deaths": 323},
+        {"rank": 9, "player": "FerdinandBrickleballs", "deaths": 320},
+        {"rank": 10, "player": "Deepwater55", "deaths": 309}
+    ],
+    "topRevives": [
+        {"rank": 1, "player": "Terra", "revives": 108},
+        {"rank": 2, "player": "TaG_Smoke", "revives": 95},
+        {"rank": 3, "player": "Chief", "revives": 95},
+        {"rank": 4, "player": "Nivica", "revives": 76},
+        {"rank": 5, "player": "UncleNephew", "revives": 74},
+        {"rank": 6, "player": "N. Conforti", "revives": 73},
+        {"rank": 7, "player": "Storm_NoAim", "revives": 68},
+        {"rank": 8, "player": "Rædwald", "revives": 65},
+        {"rank": 9, "player": "Gnome", "revives": 65},
+        {"rank": 10, "player": "dogface", "revives": 60}
+    ],
+    "topTeamKills": [
+        {"rank": 1, "player": "FerdinandBrickleballs", "teamKills": 102},
+        {"rank": 2, "player": "STD+,ARMR,BLUD,ACE,SLAP,TPPB,YD]", "teamKills": 74},
+        {"rank": 3, "player": "Public Indecency", "teamKills": 67},
+        {"rank": 4, "player": "Kaptain Kannibis", "teamKills": 60},
+        {"rank": 5, "player": "The Vengeful Teapot", "teamKills": 53},
+        {"rank": 6, "player": "buckwild", "teamKills": 52},
+        {"rank": 7, "player": "WookieWithACookie", "teamKills": 49},
+        {"rank": 8, "player": "SpaceRam", "teamKills": 42},
+        {"rank": 9, "player": "Legacy", "teamKills": 39},
+        {"rank": 10, "player": "dabatblebear38", "teamKills": 35}
+    ],
+    "topMeleeKills": [
+        {"rank": 1, "player": "buckwild", "meleeKills": 128},
+        {"rank": 2, "player": "The Vengeful Teapot", "meleeKills": 77},
+        {"rank": 3, "player": "RollyOllie", "meleeKills": 33},
+        {"rank": 4, "player": "Kaptain Kannibis", "meleeKills": 26},
+        {"rank": 5, "player": "MsterLich", "meleeKills": 26},
+        {"rank": 6, "player": "Uncle Iroh", "meleeKills": 26},
+        {"rank": 7, "player": "Coden", "meleeKills": 24},
+        {"rank": 8, "player": "BrotherBlunt", "meleeKills": 20},
+        {"rank": 9, "player": "Guy Spaghetti", "meleeKills": 18},
+        {"rank": 10, "player": "JJones", "meleeKills": 15}
+    ]
+}

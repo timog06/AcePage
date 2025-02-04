@@ -1,0 +1,51 @@
+:root {
+  --background-dark: #0A0E29;
+  --widget-bg: #141B41;
+  --widget-bg-lighter: #1B2559;
+  --accent-yellow: #FFE81F;
+  --accent-yellow-dark: #D4C119;
+  --text-primary: #ffffff;
+  --text-secondary: #B8B9C3;
+}
+
+$colors: (
+  'background-dark': var(--background-dark),
+  'widget-bg': var(--widget-bg), 
+  'widget-bg-lighter': var(--widget-bg-lighter),
+  'accent-yellow': var(--accent-yellow),
+  'accent-yellow-dark': var(--accent-yellow-dark),
+  'text-primary': var(--text-primary),
+  'text-secondary': var(--text-secondary)
+);
+
+// Common mixins
+@mixin button {
+  background-color: var(--accent-yellow);
+  color: var(--background-dark);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.2);
+  margin-left: -1px;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-yellow-dark);
+    box-shadow: 0 4px 20px rgba(255, 232, 31, 0.3);
+  }
+}
+
+@mixin container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@mixin widget {
+  background-color: var(--widget-bg);
+  padding: 2rem;
+  border-radius: 15px;
+}

@@ -1,0 +1,51 @@
+{
+    "startDate": "November 9, 2024",
+    "topKills": [
+        {"rank": 1, "player": "The Grand Finale", "kills": 4379},
+        {"rank": 2, "player": "Legacy", "kills": 3654},
+        {"rank": 3, "player": "The Vengeful Teapot", "kills": 2109},
+        {"rank": 4, "player": "SpaceRam", "kills": 2038},
+        {"rank": 5, "player": "RollyOllie", "kills": 1931},
+        {"rank": 6, "player": "RudeMood", "kills": 1662},
+        {"rank": 7, "player": "ValkorHelio", "kills": 1575},
+        {"rank": 8, "player": "LT. KingG", "kills": 1480},
+        {"rank": 9, "player": "FerdinandBrickleballs", "kills": 1345},
+        {"rank": 10, "player": "Lyon", "kills": 1168}
+    ],
+    "topDeaths": [
+        {"rank": 1, "player": "LT. KingG", "deaths": 1383},
+        {"rank": 2, "player": "The Vengeful Teapot", "deaths": 1007},
+        {"rank": 3, "player": "Imperator", "deaths": 969},
+        {"rank": 4, "player": "RollyOllie", "deaths": 936},
+        {"rank": 5, "player": "SpaceRam", "deaths": 898},
+        {"rank": 6, "player": "RudeMood", "deaths": 795},
+        {"rank": 7, "player": "The Grand Finale", "deaths": 731},
+        {"rank": 8, "player": "FerdinandBrickleballs", "deaths": 682},
+        {"rank": 9, "player": "ValkorHelio", "deaths": 656},
+        {"rank": 10, "player": "fire the emergency booosters", "deaths": 627}
+    ],
+    "topRevives": [
+        {"rank": 1, "player": "Joe1345", "revives": 185},
+        {"rank": 2, "player": "Echo", "revives": 145},
+        {"rank": 3, "player": "TaG_Smoke", "revives": 125},
+        {"rank": 4, "player": "Mist", "revives": 117},
+        {"rank": 5, "player": "Cody_Acurrate#01", "revives": 114},
+        {"rank": 6, "player": "Terra", "revives": 113},
+        {"rank": 7, "player": "Minthara Baenre", "revives": 109},
+        {"rank": 8, "player": "PDADDY", "revives": 104},
+        {"rank": 9, "player": "Dude Banger", "revives": 103},
+        {"rank": 10, "player": "[MT]877CashNow", "revives": 96}
+    ],
+    "topTeamKills": [
+        {"rank": 1, "player": "FerdinandBrickleballs", "teamKills": 208},
+        {"rank": 2, "player": "The Vengeful Teapot", "teamKills": 187},
+        {"rank": 3, "player": "SpaceRam", "teamKills": 134},
+        {"rank": 4, "player": "dantheman05", "teamKills": 102},
+        {"rank": 5, "player": "Legacy", "teamKills": 95},
+        {"rank": 6, "player": "JJones", "teamKills": 92},
+        {"rank": 7, "player": "The Grand Finale", "teamKills": 89},
+        {"rank": 8, "player": "STD+,ARMR,BLUD,ACE,SLAP,TPPB,YD]", "teamKills": 87},
+        {"rank": 9, "player": "WookieWithACookie", "teamKills": 87},
+        {"rank": 10, "player": "LT. KingG", "teamKills": 83}
+    ]
+}

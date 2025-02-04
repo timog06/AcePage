@@ -1,0 +1,43 @@
+.rules-container {
+  max-width: 2000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.rules-section {
+  background-color: var(--widget-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  height: auto;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+
+  p {
+    font-family: 'Star Wars', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    font-family: 'Consolas', monospace;
+    font-weight: normal;
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent-yellow);
+      }
+    }
+  }
+}
