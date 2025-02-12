@@ -6,7 +6,7 @@ const Rules = () => {
       <div className="hero-section">
         <div className="logo-container">
           <Link to="/">
-            <img src="/logo.png" alt="ACE Studios Logo" className="logo" />
+            <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />
           </Link>
         </div>
         <h1>Server Rules</h1>

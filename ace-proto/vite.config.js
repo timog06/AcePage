@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/AcePage/react-proto/ace-proto/'  // Full path to dist folder
+  base: '/AcePage/'
 })

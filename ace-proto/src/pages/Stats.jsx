@@ -9,7 +9,7 @@ const Statistics = () => {
         <div className="logo-container">
           <Link to="/" className="logo-link">
             <img 
-              src="/logo.png" 
+              src="/AcePage/logo.png" 
               alt="ACE Studios Logo" 
               className="logo"
             />

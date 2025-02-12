@@ -16,7 +16,7 @@ const PersonalStats = () => {
       let found = false;
       for (let i = 1; i <= 3; i++) {
         try {
-          const response = await fetch(`/personal_stats_${i}.json`);
+          const response = await fetch(`/AcePage/personal_stats_${i}.json`);
           const data = await response.json();
           
           if (steamId === data.steamId) {

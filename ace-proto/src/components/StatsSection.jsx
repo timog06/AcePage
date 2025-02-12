@@ -18,7 +18,7 @@ const StatsSection = ({ title, jsonPath }) => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(jsonPath)
+    fetch('/AcePage/' + jsonPath.replace(/^\//, ''))
       .then(response => response.json())
       .then(json => {
         setData(json)

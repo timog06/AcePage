@@ -26,7 +26,7 @@ const Comparison = () => {
       let found = false;
       for (let i = 1; i <= 3; i++) {
         try {
-          const response = await fetch(`/personal_stats_${i}.json`);
+          const response = await fetch(`/AcePage/personal_stats_${i}.json`);
           const data = await response.json();
           if (steamId === data.steamId) {
             setPlayers((prev) => [...prev, data]);
@@ -60,7 +60,7 @@ const Comparison = () => {
       <div className="hero-section">
         <div className="logo-container">
           <Link to="/">
-            <img src="/logo.png" alt="ACE Studios Logo" className="logo" />
+            <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />
           </Link>
         </div>
         <h1>Player Comparison</h1>

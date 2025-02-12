@@ -9,9 +9,9 @@ const Navbar = () => {
       </Link>
       <div className="navbar-links">
         <Link to="/">Home</Link>
-        <Link to="/stats">Server Statistics</Link>
-        <Link to="/rules">Rules</Link>
-        <Link to="/about">About</Link>
+        <Link to="stats">Server Statistics</Link>
+        <Link to="rules">Rules</Link>
+        <Link to="about">About</Link>
         <a href="https://discord.gg/WFUhgbtrwB" target="_blank" rel="noopener noreferrer">
           <DiscordIcon className="discord-icon" sx={{ color: 'white' }} />
         </a>

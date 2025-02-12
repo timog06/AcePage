@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -39,7 +39,7 @@ function App() {
           <footer className="footer">
           <div className="footer-left-group">
             <div className="footer-left">
-              <img src="/trade-fed.png" alt="Trade Federation" />
+              <img src="/AcePage/trade-fed.png" alt="Trade Federation" />
               <div className="footer-text">
                 <span>FUNDED BY</span>
                 <span>THE TRADE FEDERATION</span>
@@ -49,16 +49,16 @@ function App() {
             <div className="footer-divider"></div>
             <div className="footer-center">
               <Link to="/">Home</Link>
-              <Link to="/stats">Statistics</Link>
-              <Link to="/rules">Rules</Link>
-              <Link to="/about">About</Link>
+              <Link to="stats">Statistics</Link>
+              <Link to="rules">Rules</Link>
+              <Link to="about">About</Link>
             </div>
           </div>
           <div className="footer-right">
             © 2025 Ace Studios •
-            <a href="/terms">Terms</a> •
-            <a href="/privacy">Privacy</a> •
-            <a href="/cookies">Cookies</a>
+            <Link to="terms">Terms</Link> •
+            <Link to="privacy">Privacy</Link> •
+            <Link to="cookies">Cookies</Link>
           </div>
           </footer>
         </main>

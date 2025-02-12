@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const Card = ({ icon, title, description, link, isDiscord = false }) => {
+const Card = ({ icon, title, description, link}) => {
   const cardContent = (
     <>
       <img src={icon} alt={title} className="card-icon" />

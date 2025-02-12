@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <div className="hero-section">
         <div className="logo-container">
-          <img src="/logo.png" alt="ACE Studios Logo" className="logo" />
+          <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />
         </div>
         <h1>Welcome To Clan Ace</h1>
         <p>A Gaming Community with a love for flying.</p>
@@ -13,23 +13,22 @@ const Home = () => {
       
       <div className="cards-container">
         <Card
-          icon="/boba.png"
+          icon="/AcePage/boba.png"
           title="Player Statistics"
           description="Player and global statistics with advanced data analytics."
-          link="/stats"
+          link="stats"
         />
         <Card
-          icon="/death_star.png"
+          icon="/AcePage/death_star.png"
           title="Discord"
           description="Playing games & building projects. Join our Community!"
           link="https://discord.gg/WFUhgbtrwB"
-          isDiscord={true}
         />
         <Card
-          icon="/c3po.png"
+          icon="/AcePage/c3po.png"
           title="Server Rules"
           description="Code of conduct when playing on ACE Servers"
-          link="/rules"
+          link="rules"
         />
       </div>
     </>

@@ -6,7 +6,7 @@ const About = () => {
   const [users, setUsers] = useState(null);
 
   useEffect(() => {
-    fetch('/users.json')
+    fetch('/AcePage/users.json')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error loading users:', error));
@@ -17,7 +17,7 @@ const About = () => {
       <div className="hero-section">
         <div className="logo-container">
           <Link to="/">
-            <img src="/logo.png" alt="ACE Studios Logo" className="logo" />
+            <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />
           </Link>
         </div>
         <h1>About Us</h1>
