@@ -1,0 +1,64 @@
+{
+    "username": "obese_sister",
+    "steamId": "76561199346479266",
+    "profilePicture": null,
+    "offensive": {
+        "kills": 929,
+        "killsPerGame": 7.0,
+        "deaths": 750,
+        "deathsPerGame": 5.6,
+        "kd": 1.24
+    },
+    "defensive": {
+        "revives": 92,
+        "revivesPerGame": 0.7,
+        "timesRevived": 82
+    },
+    "negative": {
+        "teamKills": 24,
+        "teamKillsPerGame": 0.2
+    },
+    "bestPerformance": {
+        "bestGame": {
+            "kills": 75,
+            "map": "Sesid INV V2",
+            "date": "01-05"
+        },
+        "mostUsedWeapon": {
+            "weapon": "E5CR NEW",
+            "kills": 180
+        }
+    },
+    "matchStats": {
+        "matchesPlayed": 133,
+        "serverKills": 560973,
+        "serverRevives": 83484,
+        "serverMatches": 1640
+    },
+    "playerInteractions": {
+        "mostKilled": {
+            "player": "obese sister",
+            "kills": 8
+        },
+        "mostKilledBy": {
+            "player": "Legacy",
+            "deaths": 13
+        },
+        "mostTeamKilled": {
+            "player": "STORIS",
+            "kills": 1
+        },
+        "mostTeamKilledBy": {
+            "player": "DarkBroth3rh00d",
+            "deaths": 3
+        },
+        "mostMeleed": {
+            "player": "Toyoda",
+            "kills": 1
+        },
+        "mostMeleedBy": {
+            "player": "DualShark",
+            "deaths": 1
+        }
+    }
+}
