@@ -1,9 +1,10 @@
 import Card from '../components/Card'
 
+// Landing page with feature cards and clan section
 const Home = () => {
   return (
     <>
-      <div className="hero-section">
+      <div className="clan-section">
         <div className="logo-container">
           <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />
         </div>

@@ -57,7 +57,7 @@ const Comparison = () => {
 
   return (
     <main className="main-content">
-      <div className="hero-section">
+      <div className="clan-section">
         <div className="logo-container">
           <Link to="/">
             <img src="/AcePage/logo.png" alt="ACE Studios Logo" className="logo" />

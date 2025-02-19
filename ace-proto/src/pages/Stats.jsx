@@ -5,7 +5,7 @@ import PersonalStats from '../components/PersonalStats';
 const Statistics = () => {
   return (
     <main className="main-content">
-      <div className="hero-section">
+      <div className="clan-section">
         <div className="logo-container">
           <Link to="/" className="logo-link">
             <img 
