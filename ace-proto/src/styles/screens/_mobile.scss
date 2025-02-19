@@ -1,0 +1,12 @@
+@use '../variables' as *;
+
+@media (max-width: $tablet) {
+  .footer {
+    .footer-left-group {
+      .footer-center {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
