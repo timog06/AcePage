@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import PersonIcon from '@mui/icons-material/Person';
 import { addToSearchHistory } from '../utils/searchHistory';
 
+// Player statistics component with search and data display
 const PersonalStats = () => {
   const [playerData, setPlayerData] = useState(null);
   const [loading, setLoading] = useState(false);

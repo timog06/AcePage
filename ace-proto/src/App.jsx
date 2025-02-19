@@ -1,3 +1,4 @@
+// Main app component with routing and layout structure
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';

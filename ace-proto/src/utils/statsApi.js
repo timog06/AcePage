@@ -1,3 +1,4 @@
+// Fetches player stats from multiple JSON files, returns first match
 export const fetchPlayerStats = async (steamId) => {
   for (let i = 1; i <= 3; i++) {
     try {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { addToSearchHistory } from '../utils/searchHistory';
 
+// Search input with history dropdown and Steam ID validation
 const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get Stats" }) => {
   const [searchId, setSearchId] = useState('');
   const [searchHistory, setSearchHistory] = useState([]);

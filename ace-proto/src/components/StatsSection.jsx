@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+// Formats camelCase to spaced text (e.g., "bestKills" -> "Best Kills")
 const addSpacesToCamelCase = (str) => {
   return str
     // Add space between lower & upper letters
