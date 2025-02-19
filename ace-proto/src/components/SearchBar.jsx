@@ -20,8 +20,14 @@ const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get
 
   const handleSearch = () => {
     if (searchId) {
-      updateSearchHistory(searchId);
-      onSearch(searchId);
+      // Sanitize input - only allow alphanumeric and hyphens
+      const sanitizedId = searchId.replace(/[^a-zA-Z0-9-]/g, '');
+      if (sanitizedId !== searchId) {
+        toast.error('Invalid Steam ID format');
+        return;
+      }
+      updateSearchHistory(sanitizedId);
+      onSearch(sanitizedId);
     }
   };
 
