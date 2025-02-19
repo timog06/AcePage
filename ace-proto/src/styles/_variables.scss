@@ -3,6 +3,21 @@ $primary-color: #FF284A;
 $background-dark: rgba(0, 0, 0, 0.7);
 $text-color: rgba(255, 255, 255, 0.87);
 
+// Opacity levels
+$opacity-light: 0.7;
+$opacity-medium: 0.8;
+$opacity-high: 0.9;
+
+// Z-index layers
+$z-navbar: 10;
+$z-dropdown: 20;
+$z-modal: 30;
+
+// Avatar sizes
+$avatar-sm: 32px;
+$avatar-md: 48px;
+$avatar-lg: 64px;
+
 // Spacing
 $spacing-sm: 1rem;
 $spacing-md: 2rem;
