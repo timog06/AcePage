@@ -17,3 +17,8 @@
 |18.01.2025|Fair play mate 🙂 I'll have a better look in the morning, but first thing i can see is the Hero container needs to be the same width as the card components container below. It looks like the cards have too much padding or margin on the far left and right.|Removed padding for the three columns below the header.|Complete|None|
 |19.01.2025|Hey mate, looks great 🙂 i see a couple of content overflow issues:||Complete||
 |19.01.2025|Weekends been busy, but looks like we will need to turn the stats mod into rest api. I'd say carry on with that static data for the stats for now and finish off what else you need to do in the meantime. // might be worth to jump in a call if you're free any evening this week to go through it better and confirm what endpoints that'll work for you.|Create a small list of endpoints that would make sense from the website.|Complete|None.|
+|24.01.2025|Yeah it's a good idea. React apps are just better to work on. only drawback is you need to understand JSX aswell as javascript.|Started React project and converted initial components.|Complete|None.|
+|31.01.2025|(From Call) "We have our own design we made on Figma if you wanna take a look and even try making it."|Started a second React project based on client’s own design.|Complete|Ask client to provide API details.|
+|31.01.2025|I like that idea. Ideally we could add X amount of users to compare stats with, not just 2|Complete|Ask client for confirmation.|
+|04.02.2025|Very cool! Looks fantastic|Completed 2nd react project.|Complete|None|
+|21.02.2025| | | | |
