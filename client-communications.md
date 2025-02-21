@@ -11,3 +11,9 @@
 |18.01.2025  |Discord, Messages     |Showed the first version for index.html to client.|Working on the website.|
 |19.01.2025  |Discord, Messages     |Showed the first version for the entire website to client.|Finished first version on pages branch.|
 |19.01.2025  |Discord, Messages     |Talked about API Endpoints for stats and more to add to the website.|Only using json files for example structure.|
+|24.01.2025  |Discord, Messages     |Talked about React and to remake the website with React+Vite and SASS/SCSS.|Created a react project and started.|
+|30.01.2025  |Discord, Messages     |Agreed on a date for a call.|None.|
+|31.01.2025  |Discord, Call         |Talked about their own design and client's API for the stats.|Started a 2nd React Project for Clients own design.|
+|31.01.2025  |Discord, Messages     |Talked about adding stats comparison.|Made notes on how it should look and how to implement.|
+|04.02.2025  |Dsicord, Messages     |Told client about finishing the 2nd react project and asked for update on the API.|None.|
+|21.02.2025  |Discord, Call         |||
