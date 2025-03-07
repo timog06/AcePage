@@ -16,4 +16,6 @@
 |31.01.2025  |Discord, Call         |Talked about their own design and client's API for the stats.|Started a 2nd React Project for Clients own design.|
 |31.01.2025  |Discord, Messages     |Talked about adding stats comparison.|Made notes on how it should look and how to implement.|
 |04.02.2025  |Dsicord, Messages     |Told client about finishing the 2nd react project and asked for update on the API.|None.|
-|21.02.2025  |Discord, Call         |||
+|21.02.2025  |Discord, Call         |Talked about the React project and API. Project good, API unfinished.|None.|
+|28.02.2025  |Discord, Messages     |Alright pal. yeah I'll have time tomorrow to get this sorted |None.|
+|28.02.2025  |Discord, Messages     |Talked to Ollie and he's gonna cordon me off tomorrow to get it sorted haha. so it shall be done, finally|None.|
