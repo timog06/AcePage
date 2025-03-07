@@ -21,4 +21,4 @@
 |31.01.2025|(From Call) "We have our own design we made on Figma if you wanna take a look and even try making it."|Started a second React project based on client’s own design.|Complete|Ask client to provide API details.|
 |31.01.2025|I like that idea. Ideally we could add X amount of users to compare stats with, not just 2|Complete|Ask client for confirmation.|
 |04.02.2025|Very cool! Looks fantastic|Completed 2nd react project.|Complete|None|
-|21.02.2025| | | | |
+|21.02.2025|(From Call) "It looks really cool, good idea to replace the API responses with json files. I think we can call this finished."|None.|Complete.|None.|
