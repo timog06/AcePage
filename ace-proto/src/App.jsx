@@ -12,6 +12,7 @@ import './App.scss';
 function App() {
   return (
     <Router>
+      <div className="cursor-overlay"></div>
       <div className="app">
         <Toaster
           position="top-center"
