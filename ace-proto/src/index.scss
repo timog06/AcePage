@@ -42,7 +42,7 @@ body {
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   transition: opacity 0.2s ease;
 }
 
