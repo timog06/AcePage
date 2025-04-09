@@ -37,7 +37,7 @@ const AnimatedCursor = ({ disabled = false }) => {
       const laser = document.createElement('div');
       laser.className = 'laser-beam';
       laser.style.left = `${e.clientX}px`;
-      laser.style.top = `${e.clientY - 3.75}px`; // Adjust for cannon position
+      laser.style.top = `${e.clientY - 8.69}px`; // Adjust for cannon position
       laser.style.transformOrigin = 'top center';
       
       // Add to DOM
