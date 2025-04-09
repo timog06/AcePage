@@ -3,6 +3,9 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import PersonIcon from "@mui/icons-material/Person";
 import toast from "react-hot-toast";
+import { fetchPlayerStats } from "../utils/statsApi";
+import { withErrorHandling } from "../utils/errorHandler";
+import Loading from "../components/Loading";
 
 const Comparison = () => {
   const [players, setPlayers] = useState([]);
@@ -20,30 +23,25 @@ const Comparison = () => {
       toast.error("This player is already in the comparison");
       return;
     }
+    
     setLoading(true);
     setError(null);
-    try {
-      let found = false;
-      for (let i = 1; i <= 3; i++) {
-        try {
-          const response = await fetch(`/AcePage/personal_stats_${i}.json`);
-          const data = await response.json();
-          if (steamId === data.steamId) {
-            setPlayers((prev) => [...prev, data]);
-            setShowSearch(false);
-            found = true;
-            break;
-          }
-        } catch (err) {
-          console.error(`Error fetching personal_stats_${i}.json:`, err);
-        }
+    
+    const data = await withErrorHandling(
+      () => fetchPlayerStats(steamId),
+      { 
+        context: 'player comparison',
+        showToast: true 
       }
-      if (!found) {
-        setError("Player not found");
-      }
-    } catch (err) {
-      setError("Failed to fetch player data");
+    );
+    
+    if (data) {
+      setPlayers((prev) => [...prev, data]);
+      setShowSearch(false);
+    } else {
+      setError("Player not found");
     }
+    
     setLoading(false);
   };
 
@@ -80,7 +78,7 @@ const Comparison = () => {
         </div>
         {error && <p className="error-message">{error}</p>}
         {loading ? (
-          <p>Loading...</p>
+          <Loading />
         ) : players.length > 0 ? (
           <div className="comparison-results">
             <div className="comparison-header">

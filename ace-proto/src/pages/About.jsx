@@ -1,15 +1,29 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PersonIcon from '@mui/icons-material/Person';
+import Loading from '../components/Loading';
+import { handleError } from '../utils/errorHandler';
 
 const About = () => {
   const [users, setUsers] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/AcePage/users.json')
-      .then(response => response.json())
-      .then(data => setUsers(data))
-      .catch(error => console.error('Error loading users:', error));
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('/AcePage/users.json');
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        handleError(error, 'loading users', true);
+        setError('Failed to load team data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
   }, []);
 
   return (
@@ -32,6 +46,14 @@ const About = () => {
           </p>
         </div>
 
+        {loading ? (
+          <Loading />
+        ) : error ? (
+          <div className="error-container">
+            <h2>Error Loading Team Data</h2>
+            <p>{error}</p>
+          </div>
+        ) : (
         <div className="staff-section">
           <h2>Our Team</h2>
           <div className="staff-grid">
@@ -126,6 +148,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        )}
       </div>
     </main>
   );

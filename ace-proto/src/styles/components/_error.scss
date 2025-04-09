@@ -1,0 +1,43 @@
+@use "sass:color";
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.error-container {
+  @include card;
+  @include flex-center;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin: $spacing-md auto;
+  max-width: 600px;
+  text-align: center;
+  
+  h2 {
+    color: $primary-color;
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  .retry-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.5rem $spacing-md;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color $transition-speed;
+    
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%)
+    }
+  }
+}
+
+.error-message {
+  color: $primary-color;
+  margin: $spacing-sm 0;
+  text-align: center;
+}

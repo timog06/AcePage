@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { addToSearchHistory } from '../utils/searchHistory';
+import { addToSearchHistory, getSearchHistory } from '../utils/searchHistory';
+import toast from 'react-hot-toast';
 
 // Search input with history dropdown and Steam ID validation
 const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get Stats" }) => {
@@ -8,10 +9,9 @@ const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   useEffect(() => {
-    const savedHistory = localStorage.getItem('steamIdHistory');
-    if (savedHistory) {
-      setSearchHistory(JSON.parse(savedHistory));
-    }
+    // Get history from cookies instead of localStorage
+    const savedHistory = getSearchHistory();
+    setSearchHistory(savedHistory);
   }, []);
 
   const updateSearchHistory = (id) => {
@@ -32,6 +32,12 @@ const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="search-bar">
       <div className="search-input-container">
@@ -45,6 +51,7 @@ const SearchBar = ({ onSearch, placeholder = "Enter Steam ID", buttonText = "Get
           onBlur={(e) => {
             setTimeout(() => setIsInputFocused(false), 200);
           }}
+          onKeyDown={handleKeyDown}
         />
         
         {searchHistory.length > 0 && isInputFocused && (

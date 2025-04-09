@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { withErrorHandling } from '../utils/errorHandler';
+import Loading from './Loading';
 
 // Formats camelCase to spaced text (e.g., "bestKills" -> "Best Kills")
 const addSpacesToCamelCase = (str) => {
@@ -19,26 +21,47 @@ const StatsSection = ({ title, jsonPath }) => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/AcePage/' + jsonPath.replace(/^\//, ''))
-      .then(response => response.json())
-      .then(json => {
-        setData(json)
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
+    
+    const fetchData = async () => {
+      const result = await withErrorHandling(async () => {
+        const response = await fetch('/AcePage/' + jsonPath.replace(/^\//, ''));
+        return await response.json();
+      }, {
+        context: `stats section (${jsonPath})`,
+        showToast: true
+      });
+      
+      // Only update state if component is still mounted
+      if (!isMounted) return;
+      
+      if (result) {
+        setData(result);
         // Get all sections except period
-        const availableSections = Object.keys(json)
-          .filter(key => key !== 'period' && typeof json[key] === 'object')
-        setSections(availableSections)
+        const availableSections = Object.keys(result)
+          .filter(key => key !== 'period' && typeof result[key] === 'object');
+        setSections(availableSections);
         // Set serverStats as default, fallback to first section
-        const defaultSection = availableSections.find(s => s === 'serverStats') || availableSections[0]
-        setSelectedSection(defaultSection)
-        setLoading(false)
-      })
-      .catch(err => {
-        setError('Failed to load stats data')
-        setLoading(false)
-      })
-  }, [jsonPath])
+        const defaultSection = availableSections.find(s => s === 'serverStats') || availableSections[0];
+        setSelectedSection(defaultSection);
+      } else {
+        setError('Failed to load stats data');
+      }
+      
+      setLoading(false);
+    };
+    
+    fetchData();
+    
+    // Cleanup function to prevent state updates on unmounted component
+    return () => {
+      isMounted = false;
+    };
+  }, [jsonPath]);
 
-  if (loading) return <p>Loading...</p>
+  if (loading) return <Loading />
   if (error) return <p>{error}</p>
   if (!data) return null
 

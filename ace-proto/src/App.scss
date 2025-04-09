@@ -3,6 +3,8 @@
 @use "styles/base";
 @use "styles/components/navbar";
 @use "styles/components/footer";
+@use "styles/components/loading";
+@use "styles/components/error";
 @use "styles/pages/home";
 @use "styles/pages/stats";
 @use "styles/pages/rules";

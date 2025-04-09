@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import SearchBar from './SearchBar';
 import PersonIcon from '@mui/icons-material/Person';
-import { addToSearchHistory } from '../utils/searchHistory';
+import { fetchPlayerStats } from '../utils/statsApi';
+import { withErrorHandling } from '../utils/errorHandler';
+import Loading from './Loading';
 
 // Player statistics component with search and data display
 const PersonalStats = () => {
@@ -13,35 +15,22 @@ const PersonalStats = () => {
     setLoading(true);
     setError(null);
 
-    try {
-      let found = false;
-      for (let i = 1; i <= 3; i++) {
-        try {
-          const response = await fetch(`/AcePage/personal_stats_${i}.json`);
-          const data = await response.json();
-          
-          if (steamId === data.steamId) {
-            setPlayerData(data);
-            const currentHistory = JSON.parse(localStorage.getItem('steamIdHistory') || '[]');
-            addToSearchHistory(steamId, currentHistory);
-            found = true;
-            break;
-          }
-        } catch (err) {
-          console.error(`Error fetching personal_stats_${i}.json:`, err);
-        }
+    const data = await withErrorHandling(
+      () => fetchPlayerStats(steamId),
+      { 
+        context: 'player stats search',
+        showToast: true 
       }
-
-      if (!found) {
-        setError('Player not found');
-        setPlayerData(null);
-      }
-    } catch (err) {
-      setError('Failed to fetch player data');
+    );
+    
+    if (data) {
+      setPlayerData(data);
+    } else {
+      setError('Player not found');
       setPlayerData(null);
-    } finally {
-      setLoading(false);
     }
+    
+    setLoading(false);
   };
 
   return (
@@ -49,8 +38,10 @@ const PersonalStats = () => {
       <SearchBar onSearch={handleSearch} />
 
       {error && <p className="error-message">{error}</p>}
+      
+      {loading && <Loading />}
 
-      {playerData && (
+      {!loading && playerData && (
         <div className="stats-section player-stats">
           <div className="player-header">
             <div className="profile-picture">

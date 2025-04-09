@@ -1,86 +1,104 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo, useCallback } from 'react';
+import { handleError } from '../utils/errorHandler';
 
-const AnimatedCursor = () => {
+const AnimatedCursor = ({ disabled = false }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
-  const [lasers, setLasers] = useState([]);
   const cursorRef = useRef(null);
+  const laserContainerRef = useRef(null);
+  
+  // Use CSS variables instead of inline styles
+  useEffect(() => {
+    if (disabled) return;
+    
+    // Update CSS variables
+    document.documentElement.style.setProperty('--cursor-x', `${position.x}px`);
+    document.documentElement.style.setProperty('--cursor-y', `${position.y}px`);
+    document.documentElement.style.setProperty('--cursor-opacity', visible ? '1' : '0');
+  }, [position.x, position.y, visible, disabled]);
+
+  // Use callback for event handlers to prevent recreation on each render
+  const updatePosition = useCallback((e) => {
+    setPosition({ x: e.clientX, y: e.clientY });
+    if (!visible) setVisible(true);
+  }, [visible]);
+
+  const handleMouseLeave = useCallback(() => {
+    setVisible(false);
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    setVisible(true);
+  }, []);
+
+  const handleClick = useCallback((e) => {
+    // Create a laser element using CSS classes instead of state
+    if (laserContainerRef.current) {
+      const laser = document.createElement('div');
+      laser.className = 'laser-beam';
+      laser.style.left = `${e.clientX}px`;
+      laser.style.top = `${e.clientY - 3.75}px`; // Adjust for cannon position
+      laser.style.transformOrigin = 'top center';
+      
+      // Add to DOM
+      laserContainerRef.current.appendChild(laser);
+      
+      // Remove after animation completes
+      setTimeout(() => {
+        if (laserContainerRef.current && laserContainerRef.current.contains(laser)) {
+          laserContainerRef.current.removeChild(laser);
+        }
+      }, 300);
+    }
+  }, []);
 
   useEffect(() => {
+    if (disabled) return;
+    
+    // Preload cursor image with proper loading state
     const img = new Image();
-    img.src = '/AcePage/cursor.png';
-  
+    
+    img.onload = () => {
+      // Adjust cursor size based on loaded image if needed
+      if (img.width > 0 && img.height > 0) {
+        const size = Math.max(32, Math.min(img.width, 64));
+        document.documentElement.style.setProperty('--cursor-size', `${size}px`);
+      }
+    };
     
     img.onerror = (err) => {
-      console.error('Cursor image error:', err);
+      handleError(err, 'cursor image loading', false);
+      // Fallback to default cursor on error
+      document.documentElement.style.setProperty('--cursor-opacity', '0');
+      document.body.style.cursor = 'default';
     };
+    
+    img.src = '/AcePage/cursor.png';
 
-    const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      if (!visible) setVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-      setVisible(false);
-    };
-
-    const handleMouseEnter = () => {
-      setVisible(true);
-    };
-
-    const handleClick = (e) => {
-      // Create a unique ID for this laser shot
-      const shotId = Date.now();
-      
-      // Create the main laser beam
-      const newLaser = {
-        id: shotId,
-        x: e.clientX,
-        y: e.clientY - 3.75, // Adjust for cannon position
-      };
-
-      setLasers(prev => [...prev, newLaser]);
-
-      setTimeout(() => {
-        setLasers(prev => prev.filter(laser => laser.id !== shotId));
-      }, 300); // Match this to the animation duration
-    };
-
+    // Event listeners
     window.addEventListener('mousemove', updatePosition);
     document.body.addEventListener('mouseleave', handleMouseLeave);
     document.body.addEventListener('mouseenter', handleMouseEnter);
     document.addEventListener('click', handleClick);
 
+    // Cleanup
     return () => {
       window.removeEventListener('mousemove', updatePosition);
       document.body.removeEventListener('mouseleave', handleMouseLeave);
       document.body.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('click', handleClick);
     };
-  }, [visible]);
+  }, [disabled, updatePosition, handleMouseLeave, handleMouseEnter, handleClick]);
+
+  if (disabled) return null;
 
   return (
     <>
       <div 
         ref={cursorRef}
         className="custom-cursor"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          opacity: visible ? 1 : 0
-        }}
       />
-      {lasers.map(laser => (
-         <div
-           key={laser.id}
-           className="laser-beam"
-           style={{
-             left: `${laser.x}px`,
-             top: `${laser.y}px`,
-             transformOrigin: 'top center'
-           }}
-         />
-       ))}
+      <div ref={laserContainerRef} className="laser-container" />
     </>
   );
 };

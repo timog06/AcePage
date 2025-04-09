@@ -1,9 +1,22 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const Card = ({ icon, title, description, link}) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const cardContent = (
     <>
-      <img src={icon} alt={title} className="card-icon" />
+      <div className={`card-icon-container ${imageLoaded ? 'loaded' : ''}`}>
+        {!imageLoaded && !imageError && <div className="card-icon-placeholder" />}
+        <img 
+          src={icon} 
+          alt={title} 
+          className="card-icon" 
+          onLoad={() => setImageLoaded(true)}
+          onError={() => setImageError(true)}
+          style={{ display: imageError ? 'none' : 'block' }}
+        />
+      </div>
       <h3>{title}</h3>
       <p>{description}</p>
     </>

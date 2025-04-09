@@ -8,13 +8,26 @@ import Rules from './pages/Rules';
 import Comparison from './pages/Comparison';
 import About from './pages/About';
 import AnimatedCursor from './components/AnimatedCursor';
+import ErrorBoundary from './components/ErrorBoundary';
+import { useState, useEffect } from 'react';
 import './App.scss';
 
 function App() {
+  const [cursorDisabled, setCursorDisabled] = useState(false);
+  
+  // Check if cursor should be disabled (e.g., mobile devices)
+  useEffect(() => {
+    const isTouchDevice = 'ontouchstart' in window || 
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0;
+    
+    setCursorDisabled(isTouchDevice);
+  }, []);
+
   return (
     <Router>
       <div className="app">
-        <AnimatedCursor />
+        <AnimatedCursor disabled={cursorDisabled} />
         <Toaster
           position="top-center"
           containerStyle={{
@@ -30,13 +43,15 @@ function App() {
         <Navbar />
         
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/stats" element={<Stats />} />
-            <Route path="/rules" element={<Rules />} />
-            <Route path="/comparison" element={<Comparison />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/stats" element={<Stats />} />
+              <Route path="/rules" element={<Rules />} />
+              <Route path="/comparison" element={<Comparison />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </ErrorBoundary>
 
           {/* Footer */}
           <footer className="footer">

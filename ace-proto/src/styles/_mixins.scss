@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "variables" as *;
 
 // Centers content both horizontally and vertically
 @mixin flex-center {
@@ -18,4 +19,112 @@
 @mixin glass-effect {
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+// Common card styling
+@mixin card {
+  background: $background-dark;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+}
+
+// Profile picture styling
+@mixin profile-picture($size: $avatar-md) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .person-icon {
+    width: calc($size * 0.6);
+    height: calc($size * 0.6);
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+// Search bar styling
+@mixin search-bar {
+  display: flex;
+  gap: $spacing-sm;
+  
+  .search-input-container {
+    flex: 1;
+    position: relative;
+    
+    .steam-id-input {
+      width: 100%;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: $border-radius;
+      color: white;
+      font-size: 1rem;
+      
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+    
+    .search-history {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(26, 26, 26, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: $border-radius;
+      margin-top: 0.5rem;
+      z-index: $z-dropdown;
+      
+      .history-item {
+        width: 100%;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color $transition-speed;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: $primary-color;
+        }
+        
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+  
+  .search-button {
+    padding: 0.5rem $spacing-md;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color $transition-speed;
+    
+    &:hover:not(:disabled) {
+      background: color.adjust($primary-color, $lightness: -10%);
+    }
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
 }
