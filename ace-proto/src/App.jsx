@@ -7,13 +7,14 @@ import Stats from './pages/Stats';
 import Rules from './pages/Rules';
 import Comparison from './pages/Comparison';
 import About from './pages/About';
+import CustomCursor from './components/CustomCursor';
 import './App.scss';
 
 function App() {
   return (
     <Router>
-      <div className="cursor-overlay"></div>
       <div className="app">
+        <CustomCursor />
         <Toaster
           position="top-center"
           containerStyle={{

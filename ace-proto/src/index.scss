@@ -18,6 +18,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none; 
 }
 
 body {
@@ -26,12 +27,23 @@ body {
   min-height: 100vh;
 }
 
-/* Custom cursor is now handled by the cursor-overlay div */
-
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url('/AcePage/cursor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
 }
 
 a {
