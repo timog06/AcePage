@@ -29,17 +29,21 @@ const AnimatedCursor = () => {
     };
 
     const handleClick = (e) => {
+      // Create a unique ID for this laser shot
+      const shotId = Date.now();
+      
+      // Create the main laser beam
       const newLaser = {
-        id: Date.now(),
+        id: shotId,
         x: e.clientX,
-        y: e.clientY
+        y: e.clientY - 3.75, // Adjust for cannon position
       };
 
       setLasers(prev => [...prev, newLaser]);
 
       setTimeout(() => {
-        setLasers(prev => prev.filter(laser => laser.id !== newLaser.id));
-      }, 150); // Match this to the animation duration
+        setLasers(prev => prev.filter(laser => laser.id !== shotId));
+      }, 300); // Match this to the animation duration
     };
 
     window.addEventListener('mousemove', updatePosition);
@@ -72,8 +76,7 @@ const AnimatedCursor = () => {
            className="laser-beam"
            style={{
              left: `${laser.x}px`,
-             top: `${laser.y - 3.75}px`,
-             transform: 'rotate(135deg)',
+             top: `${laser.y}px`,
              transformOrigin: 'top center'
            }}
          />
